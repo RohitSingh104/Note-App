@@ -1,0 +1,81 @@
+.header-menu {
+    min-height:90px;
+    display: flex;
+    justify-content: space-between;
+    font-size:larger;
+}
+
+.menu-list{
+    margin-left: 50px;
+    min-width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.add-note{
+    margin-left: 50%;
+    width:20%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+
+
+
+#add-logo{
+    width: 50px;
+    min-height: 50px;
+}
+
+.all , .projects, .Business, .Personal {
+    min-width: 80px;
+    min-height: 35px;
+    text-align: center;
+    
+}
+
+.Personal:hover{
+
+    color:white;
+    background-color: rgb(146, 81, 207);
+    border:1px solid ghostwhite;
+    border-radius: 10%;
+    
+}
+
+.Business:hover{
+    color:white;
+    background-color: rgb(146, 81, 207);
+    border:1px solid ghostwhite;
+    border-radius: 10%;
+} 
+
+.all:hover{
+    color:white;
+    background-color: rgb(146, 81, 207);
+    border:1px solid ghostwhite;
+    border-radius: 10%;
+}
+
+.projects:hover{
+    color:white;
+    background-color: rgb(146, 81, 207);
+    border:1px solid ghostwhite;
+    border-radius: 10%;
+}
+
+.add-notes:hover{
+    color: blue;
+}
+
+.createNote-tab{
+    margin:25% 25%;
+    width:200px;
+}
+
+.addNoteWrapper{
+    display: flex;
+    flex-direction: column;
+}
