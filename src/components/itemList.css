@@ -1,20 +1,31 @@
 .item-list{
-    width:100%;
+    width:90%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-start;
+    flex-wrap:wrap;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .list-wrapper{
     width:20%;
     display:flex;
     flex-direction:column;
-    box-shadow: 2px 2px 2px 2px grey;
+    border:1px solid grey;
+    border-radius:5px;
+    box-shadow:2px 2px 2px 2px grey;
     margin-top:50px;
-    margin-left:50px;
-    min-height:200px;
+    margin-left:30px;
+    min-height:250px;
     
 }
+
+.list-wrapper:hover {
+    transform: scale(1.1);
+    /* margin-right: 10px;
+    margin-left: 20px; */
+}
+
 
 .title-list {
     display: flex;
@@ -30,6 +41,7 @@
 
 #date {
     margin-left:15px;
+    margin-top:20px;
 }
 
 #desc {

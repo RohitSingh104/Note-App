@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     font-size:larger;
+    font-weight:400;
 }
 
 .menu-list{
@@ -29,14 +30,26 @@
     min-height: 50px;
 }
 
-.all , .projects, .Business, .Personal {
+.all-menu {
     min-width: 80px;
     min-height: 35px;
-    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
     
 }
 
-.Personal:hover{
+.inactive{
+    background-color: white;
+}
+
+.active {
+    color:white;
+    background-color:rgba(137, 43, 226, 0.63);
+}
+
+/* .Personal:hover{
 
     color:white;
     background-color: rgb(146, 81, 207);
@@ -64,11 +77,9 @@
     background-color: rgb(146, 81, 207);
     border:1px solid ghostwhite;
     border-radius: 10%;
-}
+} */
 
-.add-notes:hover{
-    color: blue;
-}
+
 
 .createNote-tab{
     margin:25% 25%;
@@ -78,4 +89,25 @@
 .addNoteWrapper{
     display: flex;
     flex-direction: column;
+    
+}
+
+#title1{
+    margin-top:20px;
+    min-height:30px;
+    margin-left:14px;
+}
+
+#desc1 {
+    margin-top:20px;
+    min-height:100px;
+    min-width:173px;
+    margin-left:14px;
+   
+}
+
+#submit-btn {
+    min-width:100px;
+    margin-left:50px;
+    margin-top:20px;
 }

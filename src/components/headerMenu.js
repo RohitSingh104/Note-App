@@ -11,6 +11,9 @@ const HeaderMenu = () => {
     const [date , setDate] = useState('');
     const [title , setTitle] = useState('');
     const [desc , setDesc] = useState('');
+    const [toggleState , setToggleState] = useState(1);
+   
+
     let dispatch = useDispatch();
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -34,7 +37,9 @@ const HeaderMenu = () => {
         setDesc(e.target.value);
     }
 
- 
+    const changeState = (index) =>{
+        setToggleState(index);
+    }
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
@@ -42,16 +47,24 @@ const HeaderMenu = () => {
     return (
         <div className="header-menu">
             <div className="menu-list">
-                <div className="all">
+                <div className={toggleState === 1 ? "all-menu active" : "all-menu inactive"}
+                    onClick={() => changeState(1)}
+                >
                     All
                 </div>
-                <div className="projects">
+                <div className={toggleState === 2 ? "all-menu active" : "all-menu inactive"}
+                    onClick={() => changeState(2)}
+                >
                     Projects
                 </div>
-                <div className="Business">
+                <div className={toggleState === 3 ? "all-menu active" : "all-menu inactive"}
+                    onClick={() => changeState(3)}
+                >
                     Business
                 </div>
-                <div className="Personal">
+                <div className={toggleState === 4 ? "all-menu active" : "all-menu inactive"}
+                    onClick={() => changeState(4)}
+                >
                     Personal
                 </div>
             </div>
@@ -76,16 +89,17 @@ const HeaderMenu = () => {
                         <Typography sx={{ p: 2 }}>
                             <div className="addNoteWrapper">    
                                 <div className="date">
-                                    <input type="date" onChange={handleChangeDate} value={date}/>
+                                    <input type="date" id="date" onChange={handleChangeDate} value={date}/>
                                 </div>   
                                <div className="title">
-                                    <input type="textarea" placeholder="title" onChange={handleChangeTitle} value={title}/>
+                                    <input type="textarea" id="title1" placeholder="Title" onChange={handleChangeTitle} value={title}/>
                                 </div>
                                 <div className="description">
-                                    <input type="textarea" placeholder="Description" onChange={handleChangeDesc} value={desc}/>
+                                    <textarea id="desc1" placeholder="Description" onChange={handleChangeDesc} value={desc}> </textarea>
+                                    {/* <input type="textarea" id="desc1" placeholder="Description" onChange={handleChangeDesc} value={desc}/> */}
                                 </div>
                                 <div className="submit-btn">
-                                    <input type="submit" onClick={()=>dispatch(addNote(date,title,desc),setDate(''),setTitle(''),setDesc(''))}/>
+                                    <input type="submit" id="submit-btn" onClick={()=>dispatch(addNote(date,title,desc),setDate(''),setTitle(''),setDesc(''))}/>
                                 </div>
                             </div>
                         </Typography>
